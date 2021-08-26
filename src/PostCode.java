@@ -15,10 +15,7 @@ public class PostCode {
         for(int[] pos : possibility) {
             Boolean running = true;
             for(int i = 0; i < postcode.length(); i++) {
-                if(pos.length > i && !PostCode.comparisonToValue(pos[i],postcode.charAt(i))){
-                    running = false;
-                    break;
-                } else if (pos.length <= i) {
+                if(pos.length <= i || !PostCode.comparisonToValue(pos[i],postcode.charAt(i))){
                     running = false;
                     break;
                 }
