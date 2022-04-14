@@ -1,6 +1,4 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,15 +10,15 @@ class PostCodeTest {
 
     @Test
     void test() {
-        Assert.assertTrue(PostCode.valid("M21 8HR"));
-        Assert.assertTrue(PostCode.valid("HD3 6FD"));
-        Assert.assertTrue(PostCode.valid("BD23 2QR"));
-        Assert.assertTrue(PostCode.valid("B2 2GT"));
+        Assertions.assertTrue(PostCode.valid("M21 8HR"));
+        Assertions.assertTrue(PostCode.valid("HD3 6FD"));
+        Assertions.assertTrue(PostCode.valid("BD23 2QR"));
+        Assertions.assertTrue(PostCode.valid("B2 2GT"));
 
-        Assert.assertTrue(!PostCode.valid("B124 5BF"));
-        Assert.assertTrue(!PostCode.valid("LS21 21WS"));
-        Assert.assertTrue(!PostCode.valid("265 7RJ"));
-        Assert.assertTrue(!PostCode.valid("L23 45GF"));
+        Assertions.assertFalse(PostCode.valid("B124 5BF"));
+        Assertions.assertFalse(PostCode.valid("LS21 21WS"));
+        Assertions.assertFalse(PostCode.valid("265 7RJ"));
+        Assertions.assertFalse(PostCode.valid("L23 45GF"));
     }
 
 }
